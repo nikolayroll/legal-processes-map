@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node"
+  },
+  "include": ["src/server.ts", "src/data.ts", "src/teams-data.ts"]
+}

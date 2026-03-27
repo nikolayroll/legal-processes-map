@@ -1,0 +1,23 @@
+{
+  "name": "legal-processes-map",
+  "version": "1.0.0",
+  "description": "D3 treemap visualizing legal team workload and automation potential",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc -p tsconfig.server.json && esbuild src/client/treemap.ts --bundle --outfile=public/treemap.js --platform=browser --target=es2020 && esbuild src/client/table.ts --bundle --outfile=public/table.js --platform=browser --target=es2020",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "express": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
+    "esbuild": "^0.25.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.9.0"
+  }
+}
